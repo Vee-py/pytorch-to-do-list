@@ -307,6 +307,88 @@ Shape matters - always be aware of your tensor dimensions
 GPU acceleration - move tensors to GPU for faster computation
 Automatic gradients - PyTorch tracks operations for backpropagation
 Similar to NumPy - if you know NumPy, you'll feel at home
+🧩 1. Shape Mismatch Errors
+
+Error Example:
+
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (2x3 and 2x2)
+
+🔍 Cause:
+
+You’re performing an operation like matrix multiplication or concatenation on tensors whose dimensions don’t align.
+
+✅ Fix:
+
+Check tensor shapes with .shape or .size() and adjust them using:
+
+.view() or .reshape() to change shape
+
+.transpose() or .permute() to reorder axes
+
+.unsqueeze() / .squeeze() to add/remove dimensions
+
+Example:
+
+x = torch.rand(2, 3)
+w = torch.rand(3, 4)
+y = x @ w   # Works because (2x3) * (3x4) = (2x4)
+
+⚙️ 2. Wrong Indexing or Out-of-Bounds Access
+
+Error Example:
+
+IndexError: index 3 is out of bounds for dimension 1 with size 3
+
+🔍 Cause:
+
+You’re trying to access a tensor element outside its valid range.
+
+✅ Fix:
+
+Check the tensor’s size before indexing:
+
+x = torch.tensor([[1, 2, 3],
+                  [4, 5, 6]])
+print(x.shape)   # torch.Size([2, 3])
+print(x[0, 2])   # OK
+# print(x[0, 3]) -> ❌ IndexError
+
+⚡ 3. Device Mismatch (CPU vs GPU)
+
+Error Example:
+
+RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cuda:0 and cpu!
+
+🔍 Cause:
+
+Some tensors are on the CPU, others are on the GPU — PyTorch can’t mix them directly.
+
+✅ Fix:
+
+Move all tensors to the same device:
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+x = torch.rand(2, 2).to(device)
+y = torch.rand(2, 2).to(device)
+z = x + y
+
+🧮 4. Dtype (Data Type) Mismatch
+
+Error Example:
+
+RuntimeError: expected scalar type Float but found Long
+
+🔍 Cause:
+
+Operations like addition or loss functions expect matching tensor types — e.g. float32 vs int64.
+
+✅ Fix:
+
+Convert using .to(dtype=...) or .float(), .long(), etc.
+
+x = torch.tensor([1, 2, 3], dtype=torch.float32)
+y = torch.tensor([1, 2, 3], dtype=torch.int64)
+z = x + y.float()  # Convert y to float
 
 Practice Tips
 Start with these exercises:
