@@ -317,4 +317,4 @@ Try basic mathematical operations
 Experiment with moving tensors between CPU and GPU
 Build simple computations and compute gradients
 
-Happy learning! 🚀RetryClaude can make mistakes. Please double-check responses. Sonnet 4.5
+Happy learning! 🚀
