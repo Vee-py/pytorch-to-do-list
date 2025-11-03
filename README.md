@@ -316,5 +316,61 @@ Practice reshaping and slicing operations
 Try basic mathematical operations
 Experiment with moving tensors between CPU and GPU
 Build simple computations and compute gradients
+1. Official PyTorch Documentation
+
+Source: PyTorch Tensors Documentation
+
+The most authoritative and up-to-date reference.
+
+Covers:
+
+Tensor creation (torch.tensor, torch.arange, etc.)
+
+Tensor operations (arithmetic, indexing, reshaping)
+
+Device management (CPU, GPU)
+
+Automatic differentiation (requires_grad)
+
+Why use it: It’s written by the PyTorch developers and includes working examples.
+
+🧠 2. PyTorch Tutorials
+
+Source: PyTorch.org → Tutorials
+
+Recommended ones:
+
+“Tensors”: Deep Learning with PyTorch: A 60 Minute Blitz
+
+“Tensor Basics” section introduces:
+
+Tensor creation/manipulation
+
+Operations
+
+Interoperability with NumPy
+
+Why use it: Great for hands-on learners — code + explanation side by side.
+
+📗 3. Textbooks and Academic References
+A. Deep Learning with PyTorch (by Eli Stevens, Luca Antiga, Thomas Viehmann)
+
+Publisher: Manning Publications (2020)
+
+ISBN: 9781617295263
+
+Chapters 1–3 explain tensors, autograd, and computational graphs in a clear, visual way.
+
+Includes real-world applications (image classification, NLP, GANs).
+
+📖 Book link (Manning)
+
+B. Deep Learning (Ian Goodfellow, Yoshua Bengio, Aaron Courville)
+
+Publisher: MIT Press (2016)
+
+Free online: https://www.deeplearningbook.org/
+
+Chapter 2 ("Linear Algebra") and Chapter 3 ("Probability and Information Theory") explain tensors mathematically — beyond code.
 
 Happy learning! 🚀
