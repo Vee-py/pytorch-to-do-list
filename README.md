@@ -307,6 +307,8 @@ Shape matters - always be aware of your tensor dimensions
 GPU acceleration - move tensors to GPU for faster computation
 Automatic gradients - PyTorch tracks operations for backpropagation
 Similar to NumPy - if you know NumPy, you'll feel at home
+
+#common issues and fixes
 🧩 1. Shape Mismatch Errors
 
 Error Example:
