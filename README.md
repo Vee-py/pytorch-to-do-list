@@ -1,15 +1,17 @@
 # pytorch-tensors-to-do-list
-##PyTorch: A Quick Overview
-PyTorch is an open-source deep learning framework developed by Meta (Facebook). It's become one of the most popular tools for building neural networks and machine learning models because it's:
+PyTorch: A Quick Overview
+PyTorch is an open-source deep learning framework developed by Meta (Facebook).
+It's become one of the most popular tools for building neural networks and machine learning models because it's:
 
 Pythonic and intuitive - feels natural if you know Python
 Dynamic - you can change your network architecture on the fly
-Great for research and production - flexible enough for experimentation, robust enough for deployment
+Great for research and production - flexible enough for experimentation, robust enough for deployment.
 Well-documented - huge community and tons of tutorials
 
 Think of PyTorch as a powerful library that gives you the building blocks to create and train AI models, with tensors being the fundamental data structure.
 
-Tensors: A Detailed Guide
+Tensors:
+A Detailed Guide
 What is a Tensor?
 A tensor is essentially a multi-dimensional array - PyTorch's version of NumPy arrays, but with superpowers. They can run on GPUs for faster computation and automatically track operations for gradient calculation (crucial for training neural networks).
 Simple analogy:
